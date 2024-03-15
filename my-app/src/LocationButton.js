@@ -28,6 +28,7 @@ export default LocationButton; */
 
 
 import React from 'react';
+import './styles.css';
 
 class LocationButton extends React.Component {
   handleGetLocation = () => {
