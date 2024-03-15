@@ -1,5 +1,5 @@
 import React from 'react';
-import LocationButton from './LocationButton';
+import LocationButton from './LocationButton2';
 
 function App() {
   return (
