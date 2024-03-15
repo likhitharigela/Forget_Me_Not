@@ -54,7 +54,7 @@ export default LocationButton; */
 //         console.log(data); // Log the weather data to the console for demonstration
 //         alert(`Current Weather: ${data.weather[0].description}, Temperature: ${data.main.temp}°C`);
 //       })
-//       .catch(error => {
+//       .ccdatch(error => {
 //         console.error('Error fetching weather data:', error);
 //         console.log('hi');
 //       });
