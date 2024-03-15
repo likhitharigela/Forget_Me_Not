@@ -11,14 +11,20 @@
   } */
 /* styles.css */
 body{
-    color:rgb(8, 25, 25);
+    color:rgb(237, 243, 243);
     background-image: url('/Users/manyasingh/Desktop/Forget_Me_Not/my-app/public/img.png');
     background-repeat: no-repeat;
     background-size: cover;
-
-
-}
-button {
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+    
+        /* -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%; */
+    }
+/* button {
     color: chocolate;
     background-color: white;
     border: 1px solid chocolate;
@@ -26,11 +32,176 @@ button {
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
-  }
+    align-items: center;
+  } */
   
-  .button:hover {
+
+/* CSS */
+button {
+  background-color: transparent;
+  border: 1px solid #266DB6;
+  box-sizing: border-box;
+  color: #00132C;
+  font-family: "Avenir Next LT W01 Bold",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 16px 23px;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover,
+.button-51:active {
+  outline: 0;
+}
+
+button:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:before {
+  background-color: #D5EDF6;
+  content: "";
+  height: calc(100% + 3px);
+  position: absolute;
+  right: -7px;
+  top: -9px;
+  transition: background-color 300ms ease-in;
+  width: 100%;
+  z-index: -1;
+}
+
+button:hover:before {
+  background-color: #6DCFF6;
+}
+
+@media (min-width: 768px) {
+  .button-51 {
+    padding: 16px 32px;
+  }
+}
+  
+button:hover {
     background-color: chocolate;
     color: white;
   }
+  /* h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    text-align: center;
+    text-size-adjust: 1000;
+  } */
+/* footer{
+    background-color: aliceblue;
+    padding: 20px;
+  text-align: center;
+  margin-top: auto;
+
+} */
+/* .wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  } */
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(231, 237, 237);
+    color: rgb(28, 21, 21);
+    text-align: center;
+  }
+h1::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
   
+  h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  h1::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: hsla(120, 10%, 70%, 0.637);
+    z-index: -1;
+    transition: transform .3s ease;
+  }
+  
+  h1 {
+    position: relative;
+    font-size: 10rem;
+  }
+  
+  html {
+    block-size: 100%;
+    inline-size: 100%;
+  }
+  
+  body {
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    font-family: system-ui, sans-serif;
+  }
+  
+  @media (orientation: landscape) {
+    body {
+      grid-auto-flow: column;
+    }
+  }
+  
+  :root {
+    --main-color: #ecf0f1;
+    --point-color: #555;
+    --size: 5px;
+  }
+  
+  .loader {
+    background-color: var(--main-color);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center;  
+    z-index: 100000;
+  }
+  
+  .loader__element {
+    border-radius: 100%;
+    border: var(--size) solid var(--point-color);
+    margin: calc(var(--size)*2);
+  }
+  
+  .loader__element:nth-child(1) {
+    animation: preloader .6s ease-in-out alternate infinite;
+  }
+  .loader__element:nth-child(2) {
+    animation: preloader .6s ease-in-out alternate .2s infinite;
+  }
+  
+  .loader__element:nth-child(3) {
+    animation: preloader .6s ease-in-out alternate .4s infinite;
+  }
+  
+  @keyframes preloader {
+    100% { transform: scale(2); }
+  }
   
