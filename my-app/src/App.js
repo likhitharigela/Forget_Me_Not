@@ -1,5 +1,6 @@
 import React from 'react';
-import LocationButton from './LocationButton2';
+import LocationButton from './LocationButton';
+import './styles.css';
 
 function App() {
   return (

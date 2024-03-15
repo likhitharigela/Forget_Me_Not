@@ -1,0 +1,36 @@
+/* styles.css */
+/* .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .title {
+    font-size: 24px;
+    color: #333;
+
+  } */
+/* styles.css */
+body{
+    color:rgb(8, 25, 25);
+    background-image: url('/Users/manyasingh/Desktop/Forget_Me_Not/my-app/public/img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+button {
+    color: chocolate;
+    background-color: white;
+    border: 1px solid chocolate;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: chocolate;
+    color: white;
+  }
+  
+  
