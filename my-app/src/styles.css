@@ -18,7 +18,9 @@ body{
     display: flex;
   flex-direction: column;
   min-height: 100vh;
+  height: 300px;
   margin: 0;
+  overflow-y: scroll;
     
         /* -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
@@ -121,7 +123,9 @@ button:hover {
     color: rgb(28, 21, 21);
     text-align: center;
     font-weight: bold;
+    height: 100px; /* Set the height of your footer */
   }
+  
 h1::before {  
     transform: scaleX(0);
     transform-origin: bottom right;
@@ -146,6 +150,7 @@ h1::before {
   h1 {
     position: relative;
     font-size: 10rem;
+    text-align: center;
   }
   
   html {
@@ -161,6 +166,8 @@ h1::before {
     display: grid;
     place-content: center;
     font-family: system-ui, sans-serif;
+    justify-content: center;
+    align-items: center;
   }
   
   @media (orientation: landscape) {
@@ -210,9 +217,68 @@ h1::before {
     100% { transform: scale(2); }
   }
 
-  .inbox{
+  
+
+  .centered-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    height: 5vh;
+  }
+  
+  .input-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 300px; /* Adjust width as needed */
+  }
+  
+  .input-box:focus {
+    outline: none;
+    border-color: #266DB6; /* Change border color on focus */
   }
 
+  .dropdown-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 300px; /* Adjust width as needed */
+    background-color: #fff;
+    color: #333;
+    appearance: none; /* Remove default arrow */
+    cursor: pointer;
+  }
+  
+  .dropdown-select:focus {
+    outline: none;
+    border-color: #266DB6; /* Change border color on focus */
+  }
+  
+  /* Style the dropdown arrow */
+  .dropdown-select::after {
+    content: '\25BC'; /* Unicode for downward arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensure the arrow doesn't interfere with clicking the select */
+  }
+
+  /* .sub{
+text-align: center;
+font-size: xx-large;
+  } */
+  h2 {
+    color: #f3fafa;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    padding-bottom: 10px;
+    font-weight: bold;
+    padding: 50px;
+    
+}
 
   

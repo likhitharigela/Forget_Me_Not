@@ -406,15 +406,20 @@ class LocationButton extends React.Component {
       <div>
         <button onClick={this.handleGetLocation}>Use Current Location</button>
         <br />
-        <input
-          type="text"
-          placeholder="Enter location"
-          value={this.state.locationInput}
-          onChange={this.handleLocationChange}
-        />
+        <div className="centered-container">
+  <input
+    type="text"
+    placeholder="Enter location"
+    value={this.state.locationInput}
+    onChange={this.handleLocationChange}
+    className="input-box"
+  />
+</div>
+
         <br />
         {/* Use select dropdown for soil type */}
-        <select value={this.state.soilType} onChange={this.handleSoilChange}>
+        <div class="centered-container">
+        <select class="dropdown-select" value={this.state.soilType} onChange={this.handleSoilChange}>
           <option value="">Select Soil Type</option>
           <option value="Deep clayey">Deep clayey</option>
           <option value="Well-drained">Well-drained</option>
@@ -428,6 +433,7 @@ class LocationButton extends React.Component {
           <option value="Brown forest soil">Brown forest soil</option>
           {/* Add more options for different soil types */}
         </select>
+        </div>
         <br />
         <button onClick={this.handleGetCrops}>Get Crops</button>
         
