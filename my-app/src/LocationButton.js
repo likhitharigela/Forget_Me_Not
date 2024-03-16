@@ -407,43 +407,41 @@ class LocationButton extends React.Component {
 
   render() {
     const { crops } = this.state;
-
+  
     return (
       <div>
         <button onClick={this.handleGetLocation}>Use Current Location</button>
         <br />
         <div className="centered-container">
-  <input
-    type="text"
-    placeholder="Enter location"
-    value={this.state.locationInput}
-    onChange={this.handleLocationChange}
-    className="input-box"
-  />
-</div>
-
+          <input
+            type="text"
+            placeholder="Enter location"
+            value={this.state.locationInput}
+            onChange={this.handleLocationChange}
+            className="input-box"
+          />
+        </div>
         <br />
-        {/* Use select dropdown for soil type */}
-        <div class="centered-container">
-        <select class="dropdown-select" value={this.state.soilType} onChange={this.handleSoilChange}>
-          <option value="">Select Soil Type</option>
-          <option value="Deep clayey">Deep clayey</option>
-          <option value="Well-drained">Well-drained</option>
-          <option value="Alluvial">Alluvial</option>
-          <option value="Loamy Soil">Loamy Soil</option>
-          <option value="Deep rich loamy soil">Deep rich loamy soil</option>
-          <option value="Black soil">Black soil</option>
-          <option value="Red soil">Red soil</option>
-          <option value="Sandy soil">Sandy soil</option>
-          <option value="Mountain soil">Mountain soil</option>
-          <option value="Brown forest soil">Brown forest soil</option>
-          {/* Add more options for different soil types */}
-        </select>
+        <div className="centered-container">
+          <select className="dropdown-select" value={this.state.soilType} onChange={this.handleSoilChange}>
+            <option value="">Select Soil Type</option>
+            <option value="Deep clayey">Deep clayey</option>
+            <option value="Well-drained">Well-drained</option>
+            <option value="Alluvial">Alluvial</option>
+            <option value="Loamy Soil">Loamy Soil</option>
+            <option value="Deep rich loamy soil">Deep rich loamy soil</option>
+            <option value="Black soil">Black soil</option>
+            <option value="Red soil">Red soil</option>
+            <option value="Sandy soil">Sandy soil</option>
+            <option value="Mountain soil">Mountain soil</option>
+            <option value="Brown forest soil">Brown forest soil</option>
+          </select>
         </div>
         <br />
         <button onClick={this.handleGetCrops}>Get Crops</button>
         
-        <div>
+        {/* Scrollable container for displaying crops */}
+        <div className="scrollable-container">
           {crops.length > 0 && (
             <div>
               <h2>Suggested Crops:</h2>
@@ -458,7 +456,9 @@ class LocationButton extends React.Component {
       </div>
     );
   }
-}
+}  
+
+
 
 export default LocationButton;
 
