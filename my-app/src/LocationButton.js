@@ -271,6 +271,7 @@ class LocationButton extends React.Component {
 
     return (
       <div>
+        
         <input
           type="text"
           placeholder="Enter location"
@@ -286,7 +287,7 @@ class LocationButton extends React.Component {
         />
         <br />
         <button onClick={this.handleGetCrops}>Get Crops</button>
-
+        
         <div>
           {crops.length > 0 && (
             <div>

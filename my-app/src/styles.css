@@ -12,7 +12,7 @@
 /* styles.css */
 body{
     color:rgb(237, 243, 243);
-    background-image: url(C:\PESU\Sem4\Kalpana_2024\Forget_Me_Not\my-app\public\img.png);
+    background-image: url(/Users/manyasingh/Desktop/Forget_Me_Not/my-app/public/img.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -44,6 +44,9 @@ button {
   color: #00132C;
   font-family: "Avenir Next LT W01 Bold",sans-serif;
   font-size: 16px;
+  font-size: 18px; /* Increased font size */
+  line-height: 28px; /* Adjusted line height */
+  padding: 20px 30px; /* Increased padding */
   font-weight: 700;
   line-height: 24px;
   padding: 16px 23px;
@@ -83,6 +86,7 @@ button:hover:before {
 @media (min-width: 768px) {
   .button-51 {
     padding: 16px 32px;
+    padding: 20px 40px; /* Adjusted padding */
   }
 }
   
@@ -116,6 +120,7 @@ button:hover {
     background-color: rgb(231, 237, 237);
     color: rgb(28, 21, 21);
     text-align: center;
+    font-weight: bold;
   }
 h1::before {  
     transform: scaleX(0);
@@ -204,4 +209,10 @@ h1::before {
   @keyframes preloader {
     100% { transform: scale(2); }
   }
+
+  .inbox{
+    align-items: center;
+  }
+
+
   
