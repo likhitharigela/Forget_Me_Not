@@ -382,15 +382,21 @@ class LocationButton extends React.Component {
 
     // Example crops data
     const cropsData = [
-      { crop: 'Rice', temperature: '22-32', soil: 'Deep clayey' },
-      { crop: 'Wheat', temperature: '10-15', soil: 'Well-drained' },
-      { crop: 'Millets', temperature: '27-32', soil: 'Alluvial' },
-      { crop: 'Grams', temperature: '20-25', soil: 'Loamy Soil' },
-      { crop: 'Sugar Cane', temperature: '21-27', soil: 'Deep rich loamy soil' },
-      { crop: 'Cotton', temperature: '21-30', soil: 'Black soil' },
-      { crop: 'Oilseeds', temperature: '20-30', soil: 'Red soil' },
-      { crop: 'Tea', temperature: '20-30', soil: 'Well drained' },
-      { crop: 'Coffee', temperature: '15-28', soil: 'Well drained' }
+      { crop: <h2>'Rice: Good farming methods for rice include adopting the System of Rice Intensification (SRI) which emphasizes practices like transplanting single seedlings, alternate wetting and drying of fields for water conservation, and integrated pest management (IPM) techniques to reduce chemical usage.'</h2>, temperature: '22-32', soil: 'Deep clayey' },
+      { crop: <h2>'Wheat: For wheat farming in India, practices such as zero tillage or minimum tillage, balanced nutrient management using soil testing, adopting climate-resilient varieties, and timely sowing with proper seed treatment are recommended.'</h2>, temperature: '10-15', soil: 'Well-drained' },
+      { crop: <h2>'Millets: Sustainable farming methods for millets in India include promoting mixed cropping with legumes for nitrogen fixation, adopting organic farming practices, rainwater harvesting, and utilizing traditional knowledge of millet cultivation among local communities.'</h2>, temperature: '27-32', soil: 'Alluvial' },
+      { crop: <h2>'Grams: Integrated farming systems, conservation tillage, crop rotation with legumes like pigeon pea or lentils, and using biofertilizers or organic inputs are beneficial methods for chickpea cultivation in India.'</h2>, temperature: '20-25', soil: 'Loamy Soil' },
+      { crop: <h2>'Sugar Cane: Good farming practices for sugarcane in India involve drip irrigation or micro-irrigation systems, adopting high-yielding and disease-resistant varieties, integrated nutrient management with organic inputs, and adopting mechanized harvesting methods to reduce labor costs.'</h2>, temperature: '21-27', soil: 'Deep rich loamy soil' },
+      { crop: <h2>'Cotton: sustainable cotton farming methods include using Bt cotton varieties for pest resistance, integrated pest management (IPM) practices, water-saving technologies like drip irrigation or sprinklers, and promoting organic cotton farming for environmental sustainability.'</h2>, temperature: '21-30', soil: 'Black soil' },
+      { crop: <h2>'Oilseeds: Integrated nutrient management, crop diversification with oilseed-legume rotations, adopting precision farming technologies like GIS mapping and remote sensing, and promoting hybrid or high-yielding oilseed varieties are beneficial for oilseed cultivation in India.'</h2>, temperature: '20-30', soil: 'Red soil' },
+      { crop: <h2>'Tea: Good farming methods for tea in India include adopting shade management practices, proper pruning techniques, integrated pest and disease management (IPDM), soil conservation through mulching and contour plowing, and promoting organic tea cultivation.'</h2>, temperature: '20-30', soil: 'Well drained' },
+      { crop: <h2>'Coffee: Sustainable coffee farming in India involves shade-grown cultivation under canopy trees, integrated pest and disease management, organic farming practices, water conservation methods like drip irrigation, and promoting agroforestry systems for biodiversity and soil health.
+
+      '</h2>, temperature: '15-28', soil: 'Well drained' },
+      { crop: <h2>'Potato'</h2>, temperature: '15-20', soil: 'Sandy loam' },
+           { crop: <h2>'Tomato'</h2> , temperature: '15-30', soil: 'Well-drained loamy soil' },
+         { crop: <h2>'Onion'</h2>, temperature: '10-25', soil: 'Sandy loam' },
+        { crop: <h2>'Carrot'</h2>, temperature: '10-20', soil: 'Sandy loam' }
     ];
 
     // Filter crops based on soil type
@@ -440,7 +446,7 @@ class LocationButton extends React.Component {
         <div>
           {crops.length > 0 && (
             <div>
-              <h3>Suggested Crops:</h3>
+              <h2>Suggested Crops:</h2>
               <ul>
                 {crops.map((crop, index) => (
                   <li key={index}>{crop.crop}</li>

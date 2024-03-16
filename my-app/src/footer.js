@@ -4,7 +4,7 @@ import React from 'react';
 function Footer() {
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="bottom-container">
         <p>&copy; 2024 Your Website. All rights reserved.</p>
         <nav>
           <ul>
